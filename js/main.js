@@ -70,8 +70,21 @@ let circle = svg.append('circle')
       .transition()
       .attr('fill', determineColor2(k))
     k++
-  }
-  )
+  })
+  .on("drag", function() {
+    d3.select(this)
+      .transition()
+      .attr('fill', "#0096FF")
+  })
+
+
+  
+
+        
+  
+
+
+
 
 // changes the circle's color between red and black for the single click
 function determineColor(c) {
